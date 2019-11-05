@@ -1,0 +1,84 @@
+/**
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Typography
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 700
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400, 600, 700
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)
+*/
+
+$Pink: hsl(322, 100%, 66%);
+$DarkCyan: hsl(192, 100%, 9%);
+$PaleBlue: hsl(207, 100%, 98%);
+
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  transition: all 0.3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  .button {
+    border: 1px solid $Pink;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    color: $Pink;
+
+    &:hover {
+      background-color: $Pink;
+      color: white;
+    }
+  }
+}
