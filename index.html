@@ -39,21 +39,23 @@
       </button>
       <img src="/images/screen-mockups.svg" alt="" srcset="" />
     </section>
-    <section class="stats wrapper">
-      <div>
-        <img src="/images/icon-communities.svg" alt="" />
-        <h4>1.4k+</h4>
-        <p>Communities Formed</p>
-      </div>
-      <div>
-        <img src="/images/icon-messages.svg" alt="" />
-        <h4>2.7m+</h4>
-        <p>Messages Sent</p>
+    <section class="stats">
+      <div class="wrapper">
+        <div class="stat">
+          <img src="/images/icon-communities.svg" alt="" class="community" />
+          <p class="number">1.4k+</p>
+          <p>Communities Formed</p>
+        </div>
+        <div class="stat">
+          <img src="/images/icon-messages.svg" alt="" class="message" />
+          <p class="number">2.7m+</p>
+          <p>Messages Sent</p>
+        </div>
       </div>
     </section>
     <section class="grow blue">
       <div class="wrapper">
-        <div>
+        <div class="text">
           <h3>Grow Together</h3>
           <p>
             Generate meaningful discussions with your audience and build a
@@ -61,7 +63,7 @@
             miss out on with a feedback form.
           </p>
         </div>
-        <div>
+        <div class="image">
           <img
             src="/images/illustration-grow-together.svg"
             alt=""
@@ -72,7 +74,7 @@
     </section>
     <section class="flowing">
       <div class="wrapper">
-        <div>
+        <div class="text">
           <h3>Flowing Conversations</h3>
           <p>
             You wouldn't paginate a conversation in real life, so why do it
@@ -80,7 +82,7 @@
             flow.
           </p>
         </div>
-        <div>
+        <div class="image">
           <img
             src="/images/illustration-flowing-conversation.svg"
             alt=""
@@ -91,7 +93,7 @@
     </section>
     <section class="users blue">
       <div class="wrapper">
-        <div>
+        <div class="text">
           <h3>Your Users</h3>
           <p>
             It takes no time at all to integrate Huddle with your app's
@@ -99,7 +101,7 @@
             your users can start chatting immediately.
           </p>
         </div>
-        <div>
+        <div class="image">
           <img
             src="/images/illustration-your-users.svg"
             alt=""
@@ -114,7 +116,7 @@
     </section>
     <footer>
       <div class="wrapper">
-        <div>
+        <div class="footer-left">
           <a href="#" rel="noopener noreferrer"><img src="images/logo.svg"/></a>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -125,16 +127,18 @@
           </p>
           <p>example@huddle.com</p>
         </div>
-        <div>
-          <p>Newsletter</p>
+        <div class="footer-right">
+          <p class="uppercase">Newsletter</p>
           <p>
             To receive tips on how to grow your community, sign up to our weekly
             newsletter. We’ll never send you spam or pass on your email address
           </p>
-          <label for="newsletter">
-            <input type="text" />
-          </label>
-          <button type="submit">Subscribe</button>
+          <form action="" method="post" class="newsletter-form">
+            <label for="email">
+              <input type="email" name="email" id="email" />
+            </label>
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
       </div>
       <p class="attribution">
