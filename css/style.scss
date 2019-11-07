@@ -120,6 +120,8 @@ header {
   }
   img {
     max-width: 960px;
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -131,6 +133,10 @@ header {
     padding: 0 1rem;
     align-items: center;
     justify-content: space-around;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
 
     .stat {
       width: 230px;
@@ -170,6 +176,11 @@ header {
     background-size: cover;
     height: 155px;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      background-image: url("../images/bg-section-top-mobile-1.svg");
+      height: 45px;
+    }
   }
   &::after {
     display: block;
@@ -179,6 +190,11 @@ header {
     background-size: cover;
     height: 135px;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      background-image: url("../images/bg-section-bottom-mobile-1.svg");
+      height: 45px;
+    }
   }
 }
 
@@ -191,6 +207,11 @@ header {
     background-size: cover;
     height: 155px;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      background-image: url("../images/bg-section-top-mobile-1.svg");
+      height: 45px;
+    }
   }
   &::after {
     display: block;
@@ -200,6 +221,11 @@ header {
     background-size: cover;
     height: 135px;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      background-image: url("../images/bg-section-bottom-mobile-1.svg");
+      height: 45px;
+    }
   }
 }
 
@@ -221,6 +247,10 @@ header {
   padding: 0 2rem;
   justify-content: space-around;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+
   .image {
     flex-basis: 35%;
   }
@@ -234,6 +264,10 @@ header {
 .flowing {
   .wrapper {
     flex-direction: row-reverse;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -268,6 +302,10 @@ footer {
     margin: 5rem auto;
     padding: 0 1rem;
     justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &::before {
@@ -278,6 +316,11 @@ footer {
     background-size: cover;
     height: 155px;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      background-image: url("../images/bg-footer-top-mobile.svg");
+      height: 45px;
+    }
   }
 
   .footer-left {
@@ -314,14 +357,22 @@ footer {
     }
 
     form {
-      width: 510px;
+      max-width: 510px;
       margin-top: 2rem;
 
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
       input {
-        width: 315px;
+        max-width: 315px;
         padding: 0.7rem;
         border-radius: 5px;
         border: none;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          max-width: 500px;
+        }
       }
 
       button {
