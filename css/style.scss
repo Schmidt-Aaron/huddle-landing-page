@@ -22,6 +22,7 @@ html {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   color: $DarkCyan;
+  font-size: 15px;
 }
 
 *,
@@ -43,11 +44,19 @@ h6 {
 h2 {
   font-size: 2.7rem;
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.7rem;
+    margin-bottom: 1.4rem;
+  }
 }
 
 h3 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 h4 {
@@ -69,10 +78,20 @@ header {
   max-width: 1200px;
   height: 100px;
   margin: 0 auto 10rem;
-  padding: 1rem;
+  padding: 1rem 1.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto 5rem;
+  }
+
+  .logo img {
+    @media screen and (max-width: 768px) {
+      width: 100px;
+    }
+  }
 
   .button {
     border: 1px solid $Pink;
@@ -81,6 +100,9 @@ header {
     padding: 0.5rem 1.5rem;
     text-decoration: none;
 
+    @media screen and (max-width: 768px) {
+      padding: 0.2rem 1rem;
+    }
     &:hover {
       background-color: $Pink;
       color: white;
@@ -91,7 +113,7 @@ header {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.75rem;
 }
 
 .intro {
@@ -99,9 +121,17 @@ header {
   margin-bottom: 5rem;
   text-align: center;
 
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10rem;
+  }
+
   p {
     max-width: 480px;
     margin: 0 auto 2.5rem;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 auto 3rem;
+    }
   }
 
   button {
@@ -112,6 +142,11 @@ header {
     border-radius: 3rem;
     margin-bottom: 5rem;
     box-shadow: $Shadows;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 6rem;
+      padding: 1rem 3rem;
+    }
 
     &:hover {
       transform: translateY(2px);
@@ -126,7 +161,12 @@ header {
 }
 
 .stats {
-  margin: 4rem auto;
+  width: 75%;
+  margin: 0 auto 4rem;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
 
   .wrapper {
     display: flex;
@@ -140,6 +180,10 @@ header {
 
     .stat {
       width: 230px;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 7rem;
+      }
 
       .community {
         height: 36px;
@@ -179,7 +223,7 @@ header {
 
     @media screen and (max-width: 768px) {
       background-image: url("../images/bg-section-top-mobile-1.svg");
-      height: 45px;
+      height: 100px;
     }
   }
   &::after {
@@ -193,7 +237,7 @@ header {
 
     @media screen and (max-width: 768px) {
       background-image: url("../images/bg-section-bottom-mobile-1.svg");
-      height: 45px;
+      height: 50px;
     }
   }
 }
@@ -209,8 +253,8 @@ header {
     width: 100%;
 
     @media screen and (max-width: 768px) {
-      background-image: url("../images/bg-section-top-mobile-1.svg");
-      height: 45px;
+      background-image: url("../images/bg-section-top-mobile-2.svg");
+      height: 100px;
     }
   }
   &::after {
@@ -223,8 +267,8 @@ header {
     width: 100%;
 
     @media screen and (max-width: 768px) {
-      background-image: url("../images/bg-section-bottom-mobile-1.svg");
-      height: 45px;
+      background-image: url("../images/bg-section-bottom-mobile-2.svg");
+      height: 100px;
     }
   }
 }
@@ -244,28 +288,46 @@ header {
   display: flex;
   align-items: center;
   margin: 6rem auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   justify-content: space-around;
 
   @media screen and (max-width: 768px) {
+    margin: 6rem auto 3rem;
     flex-direction: column-reverse;
   }
 
   .image {
     flex-basis: 35%;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 3.5rem;
+      max-width: 80%;
+    }
   }
 
   .text {
-    flex-basis: 50%;
+    flex-basis: 42%;
     max-width: 520px;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
   }
 }
 
 .flowing {
   .wrapper {
     flex-direction: row-reverse;
-
     @media screen and (max-width: 768px) {
+      margin: 10rem auto 8rem;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.users {
+  .wrapper {
+    @media screen and (max-width: 768px) {
+      margin: 3rem auto 6rem;
       flex-direction: column-reverse;
     }
   }
@@ -273,15 +335,30 @@ header {
 
 .call-to-action {
   text-align: center;
-  margin: 8rem auto;
+  margin: 12rem auto;
+  @media screen and (max-width: 768px) {
+    margin: 4rem auto 15rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 3rem;
+    }
+  }
 
   button {
     background-color: $Pink;
     color: white;
     border: 1px solid $Pink;
-    padding: 1rem 4rem;
-    border-radius: 1.5rem;
+    padding: 1.2rem 5rem;
+    border-radius: 3rem;
     box-shadow: $Shadows;
+
+    @media screen and (max-width: 768px) {
+      padding: 1rem 2rem;
+    }
 
     &:hover {
       transform: translateY(2px);
@@ -300,11 +377,13 @@ footer {
     display: flex;
     flex-direction: row;
     margin: 5rem auto;
-    padding: 0 1rem;
+    padding: 0 1.75rem;
     justify-content: space-between;
 
     @media screen and (max-width: 768px) {
       flex-direction: column-reverse;
+      align-items: center;
+      padding: 0 2.5rem;
     }
   }
 
@@ -319,12 +398,35 @@ footer {
 
     @media screen and (max-width: 768px) {
       background-image: url("../images/bg-footer-top-mobile.svg");
+      height: 100px;
+    }
+
+    @media screen and (max-width: 500px) {
+      background-image: url("../images/bg-footer-top-mobile.svg");
       height: 45px;
     }
   }
 
   .footer-left {
     max-width: 330px;
+
+    @media screen and (max-width: 768px) and (min-width: 500px) {
+      max-width: 500px;
+    }
+
+    .footer-logo {
+      height: 40px;
+      width: 240px;
+
+      @media screen and (max-width: 768px) {
+        width: 190px;
+      }
+    }
+
+    .text {
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
 
     ion-icon {
       position: relative;
@@ -338,15 +440,37 @@ footer {
       right: 4px;
       margin-top: 3.5rem;
 
+      @media screen and (max-width: 768px) {
+        margin-top: 2.5rem;
+      }
+
       ion-icon {
         font-size: 2.5rem;
+        @media screen and (max-width: 768px) {
+          font-size: 2rem;
+        }
       }
     }
   }
 
   .footer-right {
-    p {
+    @media screen and (max-width: 900px) {
+      max-width: 50%;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 6rem;
+      max-width: 100%;
+    }
+
+    .text {
       max-width: 350px;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+
+      @media screen and (max-width: 768px) and (min-width: 500px) {
+        max-width: 500px;
+      }
     }
 
     .uppercase {
@@ -360,29 +484,55 @@ footer {
       max-width: 510px;
       margin-top: 2rem;
 
-      @media screen and (max-width: 768px) {
-        display: block;
+      @media screen and (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
       }
       input {
-        max-width: 315px;
-        padding: 0.7rem;
+        min-width: 315px;
+        padding: 1rem;
         border-radius: 5px;
         border: none;
 
+        @media screen and (max-width: 900px) {
+          margin-bottom: 1rem;
+        }
         @media screen and (max-width: 768px) {
           width: 100%;
-          max-width: 500px;
+          min-width: unset;
+          margin-bottom: 1rem;
         }
       }
 
       button {
         margin-left: 2rem;
-        padding: 0.7rem 2rem;
+        padding: 1rem 2rem;
         border-radius: 5px;
         border: none;
         background-color: $Pink;
         color: white;
+
+        @media screen and (max-width: 900px) {
+          align-self: flex-start;
+          width: 50%;
+          margin-left: 0;
+        }
+        @media screen and (max-width: 768px) {
+          align-self: flex-end;
+          width: 50%;
+        }
       }
     }
+  }
+}
+
+.attribution {
+  text-align: center;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
   }
 }
